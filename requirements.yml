@@ -1,0 +1,25 @@
+name: ctc_model_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cudatoolkit=11.3  # Adjust based on your GPU
+  - transformers
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - jupyterlab
+  - tqdm
+  - pip
+  - pip:
+      - tensor-sketch
+      - compact-bilinear-pooling
+To create the environment, run:
+
+conda env create -f requirements.yml
+conda activate ctc_model_env
